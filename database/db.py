@@ -1,6 +1,7 @@
 import sqlite3
 
 conn = sqlite3.connect("trace.db")
+
 cursor = conn.cursor()
 
 cursor.execute("""
@@ -14,5 +15,3 @@ CREATE TABLE IF NOT EXISTS activity (
 
 conn.commit()
 conn.close()
-
-print("Database initialized successfully!")
